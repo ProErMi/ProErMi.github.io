@@ -1,0 +1,484 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Lexend+Deca:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap'); 
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'cabin';
+}
+/* .......................... Header ............................. */
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9,30, 0.7)), url(Images/foto\ sekolah.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+nav{
+    display: flex;
+    padding: 11px 25px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fdfdfd;
+}
+nav img{
+    width: 210px;
+}
+nav .navbar-tautan{
+    flex: 1;
+    text-align: right;
+}
+nav .navbar-tautan ul li{
+    list-style-type: none;
+    display: inline-block;
+    padding: 5px 10px;
+    position: relative;
+}
+nav .navbar-tautan ul li a{
+    text-decoration: none;
+    color: #1f1f1f;
+    font-size: 1.1em;
+    font-family: "Lexend Deca";
+    font-weight: 700;
+}
+nav .navbar-tautan ul li::after{
+    content: "";
+    width: 0;
+    height: 3px;
+    background-color: #2da3f4;
+    display: block;
+    margin: auto;   
+    transition: 0.3s;
+}
+nav .navbar-tautan ul li:hover::after{
+    width: 100%;
+}
+nav .navbar-tautan ul li a:hover{
+    color:#c8a91d;
+    transition: 0.2s;
+}
+.kotak-teks{
+    width: 90%;
+    color: #ffff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.kotak-teks h1{
+    font-family: "Lexend Deca";
+    font-size: 95px;
+    font-weight: 700;
+}
+.kotak-teks p{
+    color: #fff;
+    margin: 5px 0 10px;
+    font-size: 20px;
+    font-family: system-ui;
+}
+.hero-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    margin-top: 10px;
+    padding: 12px 25px;
+    font-family: 'poppins';
+    font-size: 18px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+.hero-btn:hover{
+    background-color: #14448E;
+    color: #F1C121;
+    transition: 0.7s;
+}
+/* .......................... Visi & Misi sekolah ............................. */
+.konten-1{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 90px;
+}
+h1{
+    font-size: 32px;
+    font-weight: 500;
+}
+p{
+    color: rgb(83, 83, 83);
+    font-size: 18px;
+    font-weight: 400;
+    padding: 10px;
+}
+.kolom{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+.konten-1 .kolom .visimisi-baris{
+    flex-basis: 32.5%;
+    background-color: #2da3f4;
+    border-radius: 10px ;
+    margin-bottom: 5%;
+    padding: 20px 15px;
+    box-sizing: border-box;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.konten-1 .kolom .visimisi-baris>ol li{
+    margin-left: 20px;
+    text-align: justify;
+}
+.konten-1 .kolom .visimisi-baris h3{
+    font-family: 'lexend Deca';
+    text-align: center;
+    font-weight: 800;
+    color: #fdfdfd;
+    margin: 15px 0;
+}
+.konten-1 .kolom .visimisi-baris:hover{
+    box-shadow: 0 15px 20px 0 rgba(0, 153, 255, 0.6);
+}
+/* .......................... Program sekolah ............................. */
+.konten-2{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+.konten-2 .program-baris{
+    flex-basis: 32%;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.konten-2 .program-baris img{
+    width: 500px;
+    display: block;
+}
+.konten-2 .layer{
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+}
+.konten-2 .layer:hover{
+    background: rgba(254, 207, 16, 0.7);
+}
+.konten-2 .layer h3{
+    width: 100%;
+    font-weight: 600;
+    color: #ffff;
+    font-size: 26px;
+    bottom: 0;
+    left: 50%;
+    transform:  translateX(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+}
+.konten-2 .layer:hover h3{
+    bottom: 49%;
+    opacity: 1;
+}
+/* .......................... Fasilitas sekolah ............................. */
+.konten-3{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding: 100px;
+}
+.konten-3 .fasilitas-baris{
+    flex-basis: 31%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+}
+.konten-3 .fasilitas-baris img{
+    width: 100%;
+    border-radius: 10px;
+}
+.konten-3 .fasilitas-baris p{
+    padding: 0;
+}
+.konten-3 .fasilitas-baris h3{
+    margin-top: 16px;
+    margin: 12px;
+    text-align: left;
+}
+.konten-4{
+    width: 80%;
+    margin: auto;
+    padding-top: 40px;
+    text-align: center;
+}
+/* .......................... Testimoni ............................. */
+.konten-4 .testimoni-baris{
+    flex-basis: 44%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+    background: #FEFE00;
+    padding: 25px;
+    cursor: pointer;
+    display: flex;
+}
+.testimoni-baris img{
+    height: 40px;
+    margin: 0 30px 0 5px;
+    border-radius: 50%;
+}
+.konten-4 .testimoni-baris p{
+    color: #1f1f1f;
+    padding: 0;
+}
+.konten-4 .testimoni-baris h3{
+    margin-top: 15px;
+    text-align: left;
+}
+.konten-4 .testimoni-baris .fa-solid {
+    color: #0080FF;
+}
+/* .......................... Contact Us ............................. */
+.konten-5{
+    margin: 120px auto;
+    width: 80%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(Images/banner.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 20px;
+    text-align: center;
+    padding: 100px 0;
+}
+.konten-5 h1{
+    color: #ffff;
+    margin-bottom: 40px;
+    padding: 0;
+}
+/* .......................... Footer ............................. */
+.footer{
+    width: 100%;
+    text-align: center;
+    background-color: #212429;
+    padding: 30px 0; 
+}
+.footer h4{
+    color: #fff;
+    font-size: 25px;
+    margin-top: 25px;
+    font-weight: 600;
+}
+.media_sosial .fa-brands {
+    font-size: 25px;
+    margin: 0 12px;
+    color: #0A4893;
+    cursor: pointer;
+    padding: 18px 0;
+}
+/* ....................... About Us Page ...................... */
+.sub-header{
+    height: 80vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(Images/Background.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+}
+.sub-header h1{
+    font-family: 'Lexend Deca';
+    font-weight: 600;
+    font-size: 50px;
+    margin-top: 100px;
+}
+.sub-nav{
+    background-color: transparent;
+}
+.sub-nav .navbar-tautan> ul li a{
+    color: #fdfdfd;
+}
+.tentang-kami{
+    width: 80%;
+    margin: auto;
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+.tentang-baris{
+    flex-basis: 48%;
+    padding: 30px 2px;
+}
+.tentang-baris img{
+    width: 100%;
+}
+.tentang-baris h1{
+    padding: 0;
+}
+.tentang-baris p{
+    padding: 15px 0 25px;
+    text-align: justify;
+}
+.blue-btn{
+    border: 3px solid #14448E;
+    background: transparent;
+    color: #14448E;
+}
+.blue-btn:hover{
+    color:#F1C121;
+}
+/* ......................... Program Page ......................... */
+.program-konten{
+    width: 80%;
+    margin: auto;
+    padding: 50px 0;
+}
+.program-kiri{
+    flex-basis: 60%;
+}
+.program-kiri img{
+    width: 100%;
+}
+.program-kiri h2{
+    color: #212429;
+    margin: 5px 0;
+    font-weight: 700;
+}
+.program-kiri h4{
+    color: gray;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+.program-kiri p{
+    padding: 0;
+}
+.program-kanan{
+    flex-basis: 35%;
+}
+.program-kanan h3{
+    text-align: center;
+    background-color: #F1C121;
+    color: #fff;
+    padding: 7px 0;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+.program-kanan span{
+    font-size: 17px;
+}
+.program-kanan div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1f1f1f;
+    padding: 7px;
+    box-sizing: border-box;
+}
+/* ......................... Blog Page ............................ */
+.blog-konten{
+    width: 80%;
+    margin: auto;
+    padding: 60px 0;
+}
+.blog-kiri{
+    flex-basis: 65%;
+}
+.blog-kiri img{
+    width: 100%;
+}
+.blog-kiri h2{
+    color: #222;
+    font-weight: 600;
+    margin: 30px 0;
+}
+.blog-kiri p{
+    padding: 0;
+}
+.blog-kanan{
+    flex-basis: 32%;
+}
+.blog-kanan h3{
+    text-align: center;
+    background-color: #0080FF;
+    color: #fff;
+    padding: 8px 0;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+.blog-kanan div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: grey;
+    padding: 8px;
+    box-sizing: border-box;
+}
+.kotak-komen{
+    border: 1px solid #ccc;
+    margin: 50px 0;
+    padding: 10px 20px;
+}
+.kotak-komen h3{
+    text-align: left;
+}
+.form-komen input, 
+.form-komen textarea{
+    width: 100%;
+    padding: 10px;
+    margin: 15px 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    background-color: #f0f0f0;
+}
+.form-komen button{
+    margin: 10px 0;
+}
+/* ....................... Contact Us ........................ */
+.lokasi{
+    width: 80%;
+    margin: auto;
+    padding: 60px 0;
+}
+.lokasi iframe{
+    width: 100%;
+}
+.kontak-kami{
+    width: 80%;
+    margin: auto;
+}
+.kontak-baris{
+    flex-basis: 48%;
+    margin-bottom: 40px;
+}
+.kontak-baris div{
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+.kontak-baris div .fa-solid{
+    font-size: 22px;
+    color: #0080FF;
+    margin: 10px;
+    margin-right: 30px;
+}
+.kontak-baris div p{
+    padding: 0;
+}
+.kontak-baris div h5{
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: #14448E;
+}
+.kontak-baris input,
+.kontak-baris textarea{
+    width: 100%;
+    padding: 15px;
+    outline: none;
+    border: 2px solid #ccc;
+    box-sizing: border-box;
+}
